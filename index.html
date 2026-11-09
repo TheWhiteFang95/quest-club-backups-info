@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Quest Club Backups is a private, single-user Google Drive backup integration for the Quest Club learning game.">
+  <title>Quest Club Backups — Private backup integration</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #29253a; background: #faf7f1; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 280px; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 30px 22px 60px; }
+    header { display: flex; gap: 12px; align-items: center; padding-bottom: 24px; border-bottom: 1px solid #e4dce7; }
+    .mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 14px; background: #ffe9ab; border: 2px solid #d5aa5a; font-size: 23px; }
+    .brand { font-weight: 800; font-size: 1.05rem; letter-spacing: .015em; }
+    .eyebrow { margin: 42px 0 8px; font-size: .79rem; letter-spacing: .11em; text-transform: uppercase; font-weight: 750; color: #715db6; }
+    h1 { font-size: clamp(1.8rem, 5vw, 2.65rem); letter-spacing: -.035em; line-height: 1.15; margin: 0 0 18px; }
+    h2 { font-size: 1.14rem; margin: 0 0 12px; }
+    p { line-height: 1.75; margin: 0 0 15px; }
+    .lead { font-size: 1.12rem; max-width: 630px; }
+    .card { background: #fff; border: 1px solid #e7e0e6; border-radius: 18px; padding: 26px; margin-top: 28px; box-shadow: 0 8px 24px rgba(49,36,77,.04); }
+    ul { padding-left: 22px; line-height: 1.8; margin-bottom: 0; }
+    a { color: #56419a; text-underline-offset: 3px; }
+    a:focus-visible { outline: 3px solid #8a74cf; outline-offset: 4px; border-radius: 2px; }
+    footer { border-top: 1px solid #e4dce7; margin-top: 44px; padding-top: 20px; font-size: .91rem; color: #565067; }
+    @media (max-width: 450px) { .wrap { padding: 20px 16px 40px; } .card { padding: 20px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header><span class="mark" aria-hidden="true">✦</span><span class="brand">Quest Club Backups</span></header>
+    <main>
+      <p class="eyebrow">Personal backup utility</p>
+      <h1>Private, encrypted backups for Quest Club</h1>
+      <p class="lead">Quest Club Backups is a private, single-user integration that preserves the saved data of a family learning game. It is not a publicly available app or a service offered to other users.</p>
+      <section class="card" aria-labelledby="how-title">
+        <h2 id="how-title">How it works</h2>
+        <p>On a private server, the operator creates a consistent backup of Quest Club's SQLite database. The <strong>rclone</strong> tool encrypts the backup's content and filename before uploading it to the operator's own Google Drive.</p>
+        <p>The operator can retrieve and decrypt those backups if the game's server needs to be restored. This website contains no access to the game, database, backup files or authentication credentials.</p>
+      </section>
+      <section class="card" aria-labelledby="access-title">
+        <h2 id="access-title">Google Drive permissions</h2>
+        <p>The integration uses Google's <code>drive.file</code> permission to create, read and manage the files it creates through the connected account. It is not intended to browse unrelated files in Google Drive.</p>
+        <p>The integration is controlled by the account owner and isn't available for other people to sign up for.</p>
+      </section>
+      <section class="card" aria-labelledby="privacy-title">
+        <h2 id="privacy-title">Privacy and data handling</h2>
+        <p>Backups can contain child profile and learning-progress information, so they're encrypted locally before transfer. The website you're reading is informational only; it has no sign-in, analytics or tracking scripts.</p>
+        <p><a href="privacy.html">Read the complete privacy policy</a>.</p>
+      </section>
+    </main>
+    <footer>Quest Club Backups · Personal, non-commercial integration · <a href="privacy.html">Privacy policy</a></footer>
+  </div>
+</body>
+</html>

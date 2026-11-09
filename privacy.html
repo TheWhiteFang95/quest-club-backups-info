@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Privacy policy for the personal Quest Club Backups Google Drive integration.">
+  <title>Privacy Policy — Quest Club Backups</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #29253a; background: #faf7f1; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 280px; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 30px 22px 60px; }
+    header { display: flex; gap: 12px; align-items: center; padding-bottom: 24px; border-bottom: 1px solid #e4dce7; }
+    .mark { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 14px; background: #ffe9ab; border: 2px solid #d5aa5a; font-size: 23px; }
+    .brand { font-weight: 800; font-size: 1.05rem; }
+    .eyebrow { margin: 42px 0 8px; font-size: .79rem; letter-spacing: .11em; text-transform: uppercase; font-weight: 750; color: #715db6; }
+    h1 { font-size: clamp(1.8rem, 5vw, 2.65rem); letter-spacing: -.035em; line-height: 1.15; margin: 0 0 12px; }
+    h2 { font-size: 1.13rem; margin: 26px 0 8px; }
+    p, li { line-height: 1.75; }
+    p { margin: 0 0 14px; }
+    .card { background: #fff; border: 1px solid #e7e0e6; border-radius: 18px; padding: 26px; margin-top: 28px; box-shadow: 0 8px 24px rgba(49,36,77,.04); }
+    a { color: #56419a; text-underline-offset: 3px; }
+    a:focus-visible { outline: 3px solid #8a74cf; outline-offset: 4px; }
+    .updated { font-size: .91rem; color: #676175; }
+    footer { border-top: 1px solid #e4dce7; margin-top: 44px; padding-top: 20px; font-size: .91rem; color: #565067; }
+    @media (max-width: 450px) { .wrap { padding: 20px 16px 40px; } .card { padding: 20px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header><span class="mark" aria-hidden="true">✦</span><span class="brand">Quest Club Backups</span></header>
+    <main>
+      <p class="eyebrow">Privacy policy</p>
+      <h1>How Quest Club Backups handles data</h1>
+      <p class="updated">Last updated: 9 November 2026</p>
+      <div class="card">
+        <p>Quest Club Backups is a private, single-user integration operated by the owner of a Quest Club learning-game installation and a personal Google Drive account. It is not a public service and doesn't register or accept other users.</p>
+        <h2>1. What information is processed?</h2>
+        <p>The integration backs up a SQLite database used by Quest Club. Depending on the family's use of the game, that database may contain child profiles, learning progress, rewards, purchases and parental settings. It is treated as private family data.</p>
+        <h2>2. How Google Drive data is accessed</h2>
+        <p>The integration requests the <code>https://www.googleapis.com/auth/drive.file</code> permission. It uses that permission only to create, list, download and delete the backup files and folders created by this integration in the operator's Google Drive. It is not used to access unrelated Drive documents.</p>
+        <h2>3. How information is protected and stored</h2>
+        <p>The private Oracle-hosted server creates database snapshots using SQLite's backup function. Rclone crypt encrypts backup contents and filenames on the server before uploading them to the operator's Google Drive. Google Drive contains encrypted backup files, not an unencrypted copy of the Quest Club database.</p>
+        <p>Google OAuth credentials and encryption configuration are kept on the operator's server, not embedded in this website or published in the source repository. The operator must separately safeguard recovery passwords and credentials.</p>
+        <h2>4. Sharing and use</h2>
+        <p>Backups are used only for continuity and recovery of the private learning game. The operator does not sell the data or provide the backups to other people. Google processes uploaded files as the storage provider under the account owner's Google Drive settings and Google's own policies.</p>
+        <h2>5. Retention and deletion</h2>
+        <p>The current backup configuration aims to keep the seven newest local and cloud database snapshots, deleting older matching cloud snapshots only after a newly uploaded backup has been verified. The operator can remove any remaining backups directly from Google Drive. Removing Google authorisation prevents further access through this integration; deleting backups is a separate action.</p>
+        <h2>6. This public information website</h2>
+        <p>These pages don't offer accounts, forms, cookies, advertising or embedded analytics. They do not receive or display child data, Google OAuth tokens or backup files. The hosting platform may keep standard request logs under its own privacy practices.</p>
+        <h2>7. Contact</h2>
+        <p>Privacy or access questions about this private integration can be directed to the operator using the user-support email shown on the Google OAuth consent screen for Quest Club Backups. This integration is operated solely for that account holder's personal use.</p>
+        <h2>8. Changes to this policy</h2>
+        <p>This policy will be updated if the backup integration's permissions, storage or data-handling practices materially change.</p>
+      </div>
+      <p style="margin-top:22px"><a href="index.html">← Back to Quest Club Backups</a></p>
+    </main>
+    <footer>Quest Club Backups · <a href="index.html">Home</a></footer>
+  </div>
+</body>
+</html>
